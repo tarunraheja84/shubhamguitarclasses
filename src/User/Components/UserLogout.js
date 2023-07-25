@@ -11,7 +11,7 @@ function UserLogout() {
   const navigate=useNavigate()
   const logoutUser= async()=>{
       try{
-          await fetch(`{process.env.REACT_APP_API}/logoutUser`,{
+          await fetch(`${process.env.REACT_APP_API}/logoutUser`,{
           method:"POST",
           headers:{
             Accept:"application/json",
@@ -37,7 +37,7 @@ function UserLogout() {
       }
     try {
        const mytoken=localStorage.getItem('jwt')
-       const response=await fetch(`{process.env.REACT_APP_API}/updateUserPassword`, {
+       const response=await fetch(`${process.env.REACT_APP_API}/updateUserPassword`, {
         method: 'post',
         headers:{
           Accept:"application/json",

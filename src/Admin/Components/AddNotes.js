@@ -55,7 +55,7 @@ function AddNotes({progress, setProgress}) {
 
         if(i===0){
           i++;
-          await fetch(`{process.env.REACT_APP_API}/storeFirstChunk`, {
+          await fetch(`${process.env.REACT_APP_API}/storeFirstChunk`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ function AddNotes({progress, setProgress}) {
         }
         else{
           i++;
-          await fetch(`{process.env.REACT_APP_API}/storeOtherChunks`, {
+          await fetch(`${process.env.REACT_APP_API}/storeOtherChunks`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ function AddNotes({progress, setProgress}) {
 
   const retrieveNotes = async () => {
     setProgress(50) 
-    const response = await fetch(`{process.env.REACT_APP_API}/retrieveNotes`);
+    const response = await fetch(`${process.env.REACT_APP_API}/retrieveNotes`);
     const result = await response.json();
     setNotes(result);
     setProgress(100)
@@ -120,8 +120,8 @@ function AddNotes({progress, setProgress}) {
   const deleteNote = async (filename) => {
     try {
       setProgress(50)
-      await fetch(`{process.env.REACT_APP_API}/deleteNote/${filename}`, { method: 'DELETE' });
-      const updatedNotesResponse = await fetch(`{process.env.REACT_APP_API}/retrieveNotes`);
+      await fetch(`${process.env.REACT_APP_API}/deleteNote/${filename}`, { method: 'DELETE' });
+      const updatedNotesResponse = await fetch(`${process.env.REACT_APP_API}/retrieveNotes`);
       const updatedNotes = await updatedNotesResponse.json();
       setNotes(updatedNotes);
       setProgress(100)
@@ -143,7 +143,7 @@ function AddNotes({progress, setProgress}) {
                 <h5 className="card-title">{note.filename}</h5>
                 <h6>No. of Pages: {note.numPages}</h6>
                 <div>
-                <Link to={`{process.env.REACT_APP_API}/viewNotes?filename=${note.filename}`}
+                <Link to={`${process.env.REACT_APP_API}/viewNotes?filename=${note.filename}`}
                 className='btn'
                 id="note-btn"
               >

@@ -10,7 +10,7 @@ function AdminLogout() {
   const navigate=useNavigate()
   const logoutSingle= async()=>{
       try{
-          await fetch(`{process.env.REACT_APP_API}/logoutAdmin`,{
+          await fetch(`${process.env.REACT_APP_API}/logoutAdmin`,{
           method:"POST",
           headers:{
             Accept:"application/json",
@@ -29,7 +29,7 @@ function AdminLogout() {
   }
   const logoutAllAdminDevices= async()=>{
     try{
-        await fetch(`{process.env.REACT_APP_API}/logoutAllAdminDevices`,{
+        await fetch(`${process.env.REACT_APP_API}/logoutAllAdminDevices`,{
         method:"POST",
         headers:{
           Accept:"application/json",
@@ -54,7 +54,7 @@ function AdminLogout() {
       }
     try {
        const mytoken=localStorage.getItem('jwtAdmin')
-       const response=await fetch(`{process.env.REACT_APP_API}/updateAdminPassword`, {
+       const response=await fetch(`${process.env.REACT_APP_API}/updateAdminPassword`, {
         method: 'post',
         headers:{
           Accept:"application/json",

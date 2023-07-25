@@ -28,7 +28,7 @@ function ViewNotes({progress, setProgress}) {
   const fetchFile=async()=>{
     let numChunks=0
     try{
-      const response= await fetch(`{process.env.REACT_APP_API}/fetchNumChunks`,{
+      const response= await fetch(`${process.env.REACT_APP_API}/fetchNumChunks`,{
         method:"POST",
         headers:{
         Accept:"application/json",
@@ -45,7 +45,7 @@ function ViewNotes({progress, setProgress}) {
   
     for(let i=1;i<=numChunks;i++){
       try{
-        const response= await fetch(`{process.env.REACT_APP_API}/fetchChunk?chunkno=${i}`,{
+        const response= await fetch(`${process.env.REACT_APP_API}/fetchChunk?chunkno=${i}`,{
           method:"POST",
           headers:{
             Accept:"application/json",

@@ -8,7 +8,7 @@ function About({setProgress}) {
   const updateImage=async ()=>{
     try{
       setProgress(50)
-      const response=await fetch(`{process.env.REACT_APP_API}/retrieveFirstAdminInfo`)
+      const response=await fetch(`${process.env.REACT_APP_API}/retrieveFirstAdminInfo`)
       const result=await response.json()
       setAdminImage(`data:image/jpeg;base64,${result.image}`)
       setProgress(100)

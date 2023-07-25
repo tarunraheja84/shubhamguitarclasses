@@ -15,7 +15,7 @@ const AdminLogin = ({progress,setProgress}) => {
     e.preventDefault()
     setProgress(50)
     try{
-      const response = await fetch(`{process.env.REACT_APP_API}/loginAdmin`,{
+      const response = await fetch(`${process.env.REACT_APP_API}/loginAdmin`,{
         method:'POST',
         headers:{
           Accept:"application/json",

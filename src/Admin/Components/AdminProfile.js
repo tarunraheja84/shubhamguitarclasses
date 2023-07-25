@@ -31,7 +31,7 @@ const AdminProfile = ({setProgress}) => {
 
   const deleteImage = async () => {
     try {
-      await fetch(`{process.env.REACT_APP_API}/deleteAdminImage`, {
+      await fetch(`${process.env.REACT_APP_API}/deleteAdminImage`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const AdminProfile = ({setProgress}) => {
   const updateImage = async () => {
     try {  
       setProgress(50)  
-      await fetch(`{process.env.REACT_APP_API}/storeAdminImage`, {
+      await fetch(`${process.env.REACT_APP_API}/storeAdminImage`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ const AdminProfile = ({setProgress}) => {
     try {
         setProgress(80)
         const token=localStorage.getItem('jwtAdmin')
-        const response = await fetch(`{process.env.REACT_APP_API}/retrieveAdminInfo`,{
+        const response = await fetch(`${process.env.REACT_APP_API}/retrieveAdminInfo`,{
                 method: 'post',
                 headers:{
                   Accept:"application/json",

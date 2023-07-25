@@ -7,7 +7,7 @@ function StudentsTable({setProgress}) {
   const fetchStudents = async () => {
     try {
       setProgress(50)
-      const response = await fetch(`{process.env.REACT_APP_API}/fetchStudents`);
+      const response = await fetch(`${process.env.REACT_APP_API}/fetchStudents`);
       const result = await response.json();
       setStudents(result);
       setProgress(100)
@@ -23,8 +23,8 @@ function StudentsTable({setProgress}) {
 
   const deleteStudent = async (phoneno) => {
     try {
-      await fetch(`{process.env.REACT_APP_API}/deleteStudent/${phoneno}`, { method: 'DELETE' });
-      const updatedStudentsResponse = await fetch(`{process.env.REACT_APP_API}/fetchStudents`);
+      await fetch(`${process.env.REACT_APP_API}/deleteStudent/${phoneno}`, { method: 'DELETE' });
+      const updatedStudentsResponse = await fetch(`${process.env.REACT_APP_API}/fetchStudents`);
       const updatedStudents = await updatedStudentsResponse.json();
         setStudents(updatedStudents);
     } catch (err) {
@@ -35,7 +35,7 @@ function StudentsTable({setProgress}) {
   const logoutAllUserDevices= async(name,phoneno)=>{
         try{
             setProgress(50)
-            const response=await fetch(`{process.env.REACT_APP_API}/logoutAllUserDevices`,{
+            const response=await fetch(`${process.env.REACT_APP_API}/logoutAllUserDevices`,{
             method:"POST",
             headers:{
               Accept:"application/json",

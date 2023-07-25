@@ -51,7 +51,7 @@ const UserProfile = ({setProgress}) => {
   const updateImage = async () => {
     try {  
       setProgress(50)  
-      await fetch(`{process.env.REACT_APP_API}/storeUserImage`, {
+      await fetch(`${process.env.REACT_APP_API}/storeUserImage`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ const UserProfile = ({setProgress}) => {
     try {
         setProgress(50)
         const token=localStorage.getItem('jwt')
-        const response = await fetch(`{process.env.REACT_APP_API}/retrieveUserInfo`,{
+        const response = await fetch(`${process.env.REACT_APP_API}/retrieveUserInfo`,{
                 method: 'post',
                 headers:{
                   Accept:"application/json",

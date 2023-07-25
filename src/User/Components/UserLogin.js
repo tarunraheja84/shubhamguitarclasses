@@ -24,7 +24,7 @@ const UserLogin = ({progress,setProgress}) => {
     e.preventDefault()
     try{
       setProgress(50)
-      const response = await fetch(`{process.env.REACT_APP_API}/login`,{
+      const response = await fetch(`${process.env.REACT_APP_API}/login`,{
         method:'POST',
         headers:{
           Accept:"application/json",

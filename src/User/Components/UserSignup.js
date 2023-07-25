@@ -31,7 +31,7 @@ const UserSignup = ({progress,setProgress}) => {
       }
     try {
       setProgress(50)
-       const response=await fetch(`{process.env.REACT_APP_API}/userSignup`, {
+       const response=await fetch(`${process.env.REACT_APP_API}/userSignup`, {
         method: 'post',
         headers:{
           Accept:"application/json",

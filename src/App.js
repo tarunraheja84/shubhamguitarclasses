@@ -35,7 +35,7 @@ function App() {
 
   const isAuthenticated = async () => {
     try {
-      const response = await fetch(`{process.env.REACT_APP_API}/isAuthenticated`, {
+      const response = await fetch(`${process.env.REACT_APP_API}/isAuthenticated`, {
         method: 'POST',
         headers:{
           Accept:"application/json",
@@ -59,7 +59,7 @@ function App() {
   };
   const isAdmin = async () => {
     try {
-      const response = await fetch(`{process.env.REACT_APP_API}/isAdmin`, {
+      const response = await fetch(`${process.env.REACT_APP_API}/isAdmin`, {
         method: 'POST',
         headers:{
           Accept:"application/json",
