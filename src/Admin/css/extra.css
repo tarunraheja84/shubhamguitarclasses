@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
+
+#extra-h1 {
+    font-weight: bolder;
+    font-family: 'Lobster', cursive;
+    color: burlywood;
+    height:70vh;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+  }
+

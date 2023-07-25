@@ -1,0 +1,23 @@
+.adminLogoutBtn{
+  width:20%;
+  margin:auto;
+}
+
+#logoutOneBtn{
+  text-decoration: none;
+  width:20vw;
+  background-color:burlywood;
+}
+#logoutOneBtn:hover{
+  text-decoration: none;
+  background-color:rgb(202, 142, 62);
+}
+#logoutAllBtn{
+  width:20vw;
+  text-decoration: none;
+  background-color:red;;
+}
+#logoutAllBtn:hover{
+  text-decoration: none;
+  background-color:rgb(193, 44, 44);
+}

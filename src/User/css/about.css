@@ -1,0 +1,52 @@
+#margin-left{
+    margin-left:5rem;
+}
+#margin-right{
+    margin-left:0.5rem;
+}
+
+#about-profile-img{
+  max-width: 25vw;
+  height: 25vh;
+  border-radius: 50%;
+}
+
+#about-box{
+    width:40%;
+    margin:auto;
+}
+
+.about-h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: burlywood;
+    font-family: 'Lobster', cursive;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  
+    #about-profile-img {
+      max-width: 50vw;
+      height: 25vh;
+      border-radius: 50%;
+    }
+
+    #about-box{
+        width:100%;
+    }
+    .about-h1{
+        font-size: 24px;
+        height:2rem;
+        font-weight: bold;
+        color: burlywood;
+        font-family: 'Lobster', cursive;
+        margin-bottom: 20px;
+    }
+    #margin-left{
+        width:15rem;
+    }
+    #margin-right{
+        width:20rem;
+    }
+  }

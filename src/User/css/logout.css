@@ -1,0 +1,42 @@
+#logout-box{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.userLogoutBtn{
+    text-decoration: none;
+    width:50vw;
+    background-color:burlywood;
+  }
+#userLogoutBtn{
+    max-width:100vw;
+    width:50%;
+    margin:auto;
+  }
+.userLogoutBtn:hover{
+    text-decoration: none;
+    background-color:rgb(202, 142, 62);
+  }
+
+#userPswrdChangeBtn{
+    text-decoration: none;
+    width:80%;
+    background-color:burlywood;
+  }
+#userPswrdChangeBtn:hover{
+    text-decoration: none;
+    background-color:rgb(202, 142, 62);
+  }
+
+#password-confirm-form{
+    background-color: burlywood;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin:auto;
+}

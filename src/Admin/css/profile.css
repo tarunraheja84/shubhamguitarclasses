@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
+
+#admin-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#profile-img {
+  max-width: 50vw;
+  height: 50vh;
+  border-radius: 50%;
+}
+
+.profile-h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: burlywood;
+  font-family: 'Lobster', cursive;
+  margin-bottom: 20px;
+  width:20%;
+  margin:auto;
+}
+
+@media screen and (max-width: 600px) {
+  #adminProfile-container {
+    padding: 10px;
+  }
+
+  .profile-h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .profile-h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: burlywood;
+    font-family: 'Lobster', cursive;
+    margin-bottom: 20px;
+    width:55%;
+    margin:auto;
+  }
+
+  #profile-img {
+    max-width: 50vw;
+    height: 25vh;
+    border-radius: 50%;
+  }
+}
+

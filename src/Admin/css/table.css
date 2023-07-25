@@ -1,0 +1,75 @@
+#studentsTable-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  background-color: burlywood;
+}
+
+.table th {
+  background-color: burlywood;
+}
+
+.table td {
+  border-bottom: 1px solid whitesmoke;
+}
+
+#deletebtn {
+  width: 100%;
+  background-color: red;
+}
+#deletebtn:hover {
+  width: 100%;
+  background-color: rgb(190, 69, 69);
+}
+
+#logoutbtn {
+  width: 100%;
+  background-color: blue;
+}
+#logoutbtn:hover {
+  width: 100%;
+  background-color: rgb(42, 42, 108);
+}
+
+#addBtn {
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color:whitesmoke;
+}
+#addBtn:hover{
+  text-decoration: none;
+  background-color:rgb(166, 122, 65);
+}
+@media screen and (max-width: 600px) {
+  .table {
+    font-size: 14px;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
+
+#table-h1 {
+    font-weight: bolder;
+    font-family: 'Lobster', cursive;
+    color: burlywood;
+    height:70vh;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+  }

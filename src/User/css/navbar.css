@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
+#navbar-nav{
+    background-image:url('../images/guitar.jpg');
+    font-weight:bolder;
+    font-family: 'Lobster', cursive;
+    font-display: inherit;
+}
+
+.navbar-li{
+    margin-left:2rem;
+    margin-right:2rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    font-stretch: inherit;
+}
+
+.navbar-li:hover{
+    background-color:burlywood;
+    border-radius: 0.5rem;
+}
+
+.navbar-toggler{
+    background-color:white;
+}
+
+#shubham-name{
+    margin-right:4rem;
+}
+
+#submitBtn:hover{
+    color: burlywood;
+}
+
+.btn{
+    --bs-btn-bg: burlywood;
+    --bs-btn-border-color: burlywood;
+    --bs-btn-hover-border-color: burlywood;
+}
+
+.navbar-toggler-icon{
+    padding:0;
+    margin:0;
+}
+

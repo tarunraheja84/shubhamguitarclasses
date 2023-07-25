@@ -1,0 +1,123 @@
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  
+#login-form {
+  background-color: burlywood;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  width: 100%;
+}
+
+#checkbox {
+  display: flex;
+  align-items: center;
+}
+
+#login-button {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 8px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.login-label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+input[type='text'][id='login-input-phoneno'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+input[type='password'][id='login-input-pswrd'] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+input[type='checkbox'] {
+  margin-right: 5px;
+}
+
+#login-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+#login-button:hover {
+  background-color: #2c8a2f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.login-a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.login-a:hover {
+  text-decoration: underline;
+}
+
+.login-a-tarun {
+  color: #2c8a2f;
+  text-decoration: none;
+}
+
+.login-a-tarun:hover {
+  text-decoration: underline;
+}
+
+#login-p-signup{
+  margin-top:1rem;
+  margin-bottom:0;
+}
+
+#login-p-admin{
+  margin-top:0;
+  margin-bottom:0;
+}
+
+
+
+
+
+
+  

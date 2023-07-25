@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
+.card{
+    width:18rem;
+}
+
+#note-btn{
+    height:2rem;
+    background-color: burlywood;
+}
+#notes-delete-btn{
+    height:2rem;
+    background-color: red;
+}
+
+#note-btn:hover{
+    height:2rem;
+    background-color: rgb(146, 110, 63);
+}
+
+#notes-delete-btn:hover{
+    height:2rem;
+    background-color: rgb(120, 29, 29);
+}
+
+#addNotes-container{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.addNotes-h1{
+    font-weight: bolder;
+    font-family: 'Lobster', cursive;
+    color: burlywood;
+    height:70vh;
+    width:80vw;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+

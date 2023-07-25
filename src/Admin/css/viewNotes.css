@@ -1,0 +1,38 @@
+.react-pdf__Page__canvas, .react-pdf__Page__annotations, .react-pdf__Page__textContent{
+    height:93vh !important;
+    width:50vw !important;
+    display:none;
+}
+
+#viewNotescontainer{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.viewNotes-btn{
+    background-color: burlywood;
+    height:30%;
+}
+.viewNotes-btn:hover{
+    background-color: rgb(152, 111, 56);
+    height:30%;
+}
+
+@media screen and (max-width: 600px) {
+    #viewNotescontainer{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+    }
+    .react-pdf__Page__canvas, .react-pdf__Page__annotations, .react-pdf__Page__textContent{
+        height:93vh !important;
+        width:100vw !important;
+        margin:auto;
+        display:none;
+        margin-top:0.5rem;
+        margin-bottom:0.5rem;
+
+    }
+}

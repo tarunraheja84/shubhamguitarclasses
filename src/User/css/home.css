@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
+
+#userHome-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#home-h1 {
+  font-size: 32px;
+  font-weight: bolder;
+  color: #333;
+  color: burlywood;
+  font-family: 'Lobster', cursive;
+  margin-bottom: 20px;
+}
+
+#box{
+  display:flex;
+
+}
+
+#home-h3 {
+  font-size: 18px;
+  font-weight: bolder;
+  color: #666;
+  font-family: 'Lobster', cursive;
+  color: burlywood;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.left-image {
+  order: 1;
+  margin-right: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.right-image {
+  order: 2;
+  margin-left: 10px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.rounded-image{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .left-image,
+  .right-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .right-image {
+    order: 3;
+  }
+}
