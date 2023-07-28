@@ -75,3 +75,8 @@ input[type='email'][id='signup-input-email'] {
   margin-top:0.5rem;
   margin-bottom:0.5rem;
 }
+
+.userSignup-h4{
+  color:white;
+  font-weight: bolder;
+}
