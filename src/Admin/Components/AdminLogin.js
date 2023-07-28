@@ -44,6 +44,7 @@ const AdminLogin = ({progress,setProgress}) => {
   return (
     <>
     {progress!==100 &&  <Spinner/>} 
+    {progress!==100 &&  <h4 className="adminLogin-h4 text-center my-2">Please wait, It will take some time</h4>}
     <div className="login-form">
       <form id="login-form" onSubmit={login}>
         <h2 id="login-h2">Admin Login</h2> 
