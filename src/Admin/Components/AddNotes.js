@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {pdfjs} from 'react-pdf';
 import Spinner from './Spinner'
 import '../css/addNotes.css';
@@ -11,6 +11,8 @@ function AddNotes({progress, setProgress}) {
   const [numPages, setNumPages] = useState(0);
   const [notes, setNotes] = useState([]);
   let [chunks, setChunks] = useState([]);
+
+  const navigate=useNavigate()
 
   const convertFileToChunks=async (base64Data)=>{
     const chunkSize = 1024 * 512;
@@ -47,6 +49,7 @@ function AddNotes({progress, setProgress}) {
   };
 
   const addNotes = async () => {
+    setProgress(2)
     let i=0;
     for(const chunk of chunks){
       try {
@@ -88,7 +91,8 @@ function AddNotes({progress, setProgress}) {
         console.log(err);
       }
     }
-    window.location.reload();
+    retrieveNotes()
+    window.alert("Notes added successfully")
   };
 
   const retrieveNotes = async () => {
@@ -132,6 +136,7 @@ function AddNotes({progress, setProgress}) {
   
   return (
     <div>
+       {progress !== 100 && <Spinner />}
         <input type="file" onChange={handleFile} />
         <button onClick={() => { if (filename) addNotes() }}>Add File</button>
 
@@ -143,7 +148,7 @@ function AddNotes({progress, setProgress}) {
                 <h5 className="card-title">{note.filename}</h5>
                 <h6>No. of Pages: {note.numPages}</h6>
                 <div>
-                <Link to={`${process.env.REACT_APP_API}/viewNotes?filename=${note.filename}`}
+                <Link to={`/viewNotes?filename=${note.filename}`}
                 className='btn'
                 id="note-btn"
               >

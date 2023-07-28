@@ -5,28 +5,26 @@ import Spinner from '../Components/Spinner'
 import '../css/viewNotes.css'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+pdfjs.GlobalWorkerOptions.workerPort = null;
 
 function ViewNotes({progress, setProgress}) {
-  const [numPages,setNumPages]=useState(0)
-  const [pageNumber,setPageNumber]=useState(1)
   const [file,setFile]=useState(null)
+  const [arr,setArr]=useState([])
 
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const filename = queryParams.get('filename');
 
   function onDocumentSuccess({numPages}){
-    setNumPages(numPages)
+    for(let i=1;i<=numPages;i++){
+      arr.push(i);
     }
-  const prevPage=()=>{
-    setPageNumber(pageNumber<=1 ?1: pageNumber-1)
-  }
-  const nextPage=()=>{
-    setPageNumber(pageNumber+1>numPages ?pageNumber: pageNumber+1)
-  }
+    setArr(arr)
+    }
 
   const fetchFile=async()=>{
     let numChunks=0
+    setProgress(2)
     try{
       const response= await fetch(`${process.env.REACT_APP_API}/fetchNumChunks`,{
         method:"POST",
@@ -75,16 +73,16 @@ function ViewNotes({progress, setProgress}) {
   return (
     <>
     <div className="container" id="viewNotescontainer">
-        <button className="btn mx-2 viewNotes-btn" type="button" onClick={prevPage}>Previous</button>
       <div>
+      {progress!=100 &&  <Spinner/>} 
+      {progress!=100 &&  <h4 className="viewNotes-h4 text-center my-2">{Math.ceil(progress)}% done</h4>} 
       <Document file={`data:application/pdf;base64,${file}`} onLoadSuccess={onDocumentSuccess}>
-      <Page pageNumber={pageNumber}></Page>
+      {arr.map((i)=>(
+        <Page key={i} pageNumber={i}></Page>
+      ))}
       </Document>
       </div>
-        <h6>{pageNumber}/{numPages}</h6>
-        <button className="btn mx-2 viewNotes-btn" type="button" onClick={nextPage}>Next</button>
     </div>
-    {progress!=100 &&  <Spinner/>} 
     </>
   )
 }

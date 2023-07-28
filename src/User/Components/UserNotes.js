@@ -28,7 +28,7 @@ function AddNotes({progress, setProgress}) {
               <div className="card-body my-2">
                 <h5 className="card-title">{note.filename}</h5>
                 <h6>No. of Pages: {note.numPages}</h6>
-                <Link to={`${process.env.REACT_APP_API}/viewNotes?filename=${note.filename}`}
+                <Link to={`/viewNotes?filename=${note.filename}`}
                 className='btn'
                 id="note-btn"
               >

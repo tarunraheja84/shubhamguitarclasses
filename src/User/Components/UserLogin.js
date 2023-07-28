@@ -36,6 +36,7 @@ const UserLogin = ({progress,setProgress}) => {
         }),
         // credentials:'include'
       })
+      setProgress(70)
       const token=await response.text()
       
       localStorage.setItem("jwt",token)
@@ -87,7 +88,7 @@ const UserLogin = ({progress,setProgress}) => {
           <p id="login-p-admin">
           <Link className="login-a" to="/adminLogin">Login as admin</Link>
           </p>
-          <div className="d-flex justify-content-center"><a className="login-a-tarun" href="https://drive.google.com/file/d/1np70SAbbaKVKaCCvnTeJv7ctyB-xd7kh/view?usp=drivesdk">Created By Tarun</a></div>
+          <div className="d-flex justify-content-center"><a className="login-a-tarun" href="https://drive.google.com/file/d/1ojZ285e2j5kfzoCFGpn0xjF6uLKN8nEQ/view?usp=drivesdk">Created By Tarun</a></div>
           {/* <p>
             <Link className="login-a" to="">Forgot password?</Link>
           </p> */}

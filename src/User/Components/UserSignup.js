@@ -11,7 +11,7 @@ const UserSignup = ({progress,setProgress}) => {
   const [phoneno, setPhoneno] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [OTP, setOTP] = useState('');
+  const [OTP, setOTP] = useState('4193');
 
   const addUser = async (e) => {
     e.preventDefault()
@@ -28,6 +28,7 @@ const UserSignup = ({progress,setProgress}) => {
 
       if(password!==confirmPassword){
         window.alert("passwords do not match")
+        return
       }
     try {
       setProgress(50)
@@ -44,9 +45,7 @@ const UserSignup = ({progress,setProgress}) => {
       localStorage.setItem("jwt",token)
       setProgress(100)
       if(response.ok){
-        alert('You have signed up successfully');
-        navigate('/')
-        window.location.reload()
+        alert('You have signed up successfully. Please Login');
       }
       else
         alert("You have already signed up")

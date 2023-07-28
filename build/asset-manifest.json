@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0523c3b2.css",
+    "main.js": "/static/js/main.9eb67569.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/guitarist2.jpg": "/static/media/guitarist2.b6f75f75eb72268accc8.jpg",
+    "static/media/background.jpg": "/static/media/background.0feb24927cdeb6918f80.jpg",
+    "static/media/guitar.jpg": "/static/media/guitar.0f61b8e20d891ec6e747.jpg",
+    "static/media/guitarist.jpg": "/static/media/guitarist.5874013221bffeebae93.jpg",
+    "index.html": "/index.html",
+    "main.0523c3b2.css.map": "/static/css/main.0523c3b2.css.map",
+    "main.9eb67569.js.map": "/static/js/main.9eb67569.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0523c3b2.css",
+    "static/js/main.9eb67569.js"
+  ]
+}

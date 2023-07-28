@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {useNavigate} from 'react-router-dom';
 import profileImage from '../images/profile.png';
 import '../css/profile.css';
 
@@ -7,6 +8,8 @@ const AdminProfile = ({setProgress}) => {
   const [filename, setFilename] = useState('');
   const [src,setSrc]=useState(profileImage)
   const [email,setEmail]=useState('')
+
+  const navigate=useNavigate();
 
   const convertImageToBase64Data = async (file) => {
     const buffer = await new Promise((resolve, reject) => {
@@ -64,8 +67,7 @@ const AdminProfile = ({setProgress}) => {
       setBase64Data(base64Data)
       setProgress(100)     
   
-      alert("Image updated successfully")
-      window.location.reload();
+      retrieveAdminInfo();
     } catch (err) {
       console.log(err);
     }
