@@ -59,6 +59,11 @@ a{
   .table {
     font-size: 14px;
   }
+  #studentsTable-container {
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 20px 4.5px;
+}
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');

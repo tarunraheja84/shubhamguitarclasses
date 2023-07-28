@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 import EyePassword from '../../Admin/Components/EyePassword'
 import Spinner from './Spinner'
 import '../css/signup.css';
@@ -11,7 +11,9 @@ const UserSignup = ({progress,setProgress}) => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [OTP, setOTP] = useState('4193');
-
+  
+  const navigate=useNavigate()
+  
   const addUser = async (e) => {
     e.preventDefault()
 
@@ -44,7 +46,9 @@ const UserSignup = ({progress,setProgress}) => {
       localStorage.setItem("jwt",token)
       setProgress(100)
       if(response.ok){
-        alert('You have signed up successfully. Please Login');
+        alert('You have signed up successfully. Welcome to Shubham\'s Guitar Classes');
+        navigate('/')
+        window.location.reload();
       }
       else
         alert("You have already signed up")
