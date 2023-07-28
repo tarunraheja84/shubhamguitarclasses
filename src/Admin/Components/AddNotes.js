@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {pdfjs} from 'react-pdf';
 import Spinner from './Spinner'
 import '../css/addNotes.css';
@@ -12,7 +12,6 @@ function AddNotes({progress, setProgress}) {
   const [notes, setNotes] = useState([]);
   let [chunks, setChunks] = useState([]);
 
-  const navigate=useNavigate()
 
   const convertFileToChunks=async (base64Data)=>{
     const chunkSize = 1024 * 512;

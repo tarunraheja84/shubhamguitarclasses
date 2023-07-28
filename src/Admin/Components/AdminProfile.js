@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import {useNavigate} from 'react-router-dom';
 import profileImage from '../images/profile.png';
 import '../css/profile.css';
 
@@ -9,7 +8,6 @@ const AdminProfile = ({setProgress}) => {
   const [src,setSrc]=useState(profileImage)
   const [email,setEmail]=useState('')
 
-  const navigate=useNavigate();
 
   const convertImageToBase64Data = async (file) => {
     const buffer = await new Promise((resolve, reject) => {

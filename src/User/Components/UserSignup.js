@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import EyePassword from '../../Admin/Components/EyePassword'
 import Spinner from './Spinner'
 import '../css/signup.css';
 
 const UserSignup = ({progress,setProgress}) => {
-  const navigate=useNavigate()
   const [fname, setFname] = useState('');
   const [address, setAddress] = useState('');
   const [phoneno, setPhoneno] = useState('');
