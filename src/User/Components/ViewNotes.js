@@ -74,8 +74,8 @@ function ViewNotes({progress, setProgress}) {
     <>
     <div className="container" id="viewNotescontainer">
       <div>
-      {progress!=100 &&  <Spinner/>} 
-      {progress!=100 &&  <h4 className="viewNotes-h4 text-center my-2">{Math.ceil(progress)}% done</h4>} 
+      {progress!==100 &&  <Spinner/>} 
+      {progress!==100 &&  <h4 className="viewNotes-h4 text-center my-2">{Math.ceil(progress)}% done</h4>} 
       <Document file={`data:application/pdf;base64,${file}`} onLoadSuccess={onDocumentSuccess}>
       {arr.map((i)=>(
         <Page key={i} pageNumber={i}></Page>
