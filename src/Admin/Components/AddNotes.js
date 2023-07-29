@@ -173,7 +173,6 @@ function AddNotes({progress, setProgress}) {
         )}
           {progress===100 && notes.length===0 && <h1 className="addNotes-h1">No Notes to display</h1>}
       </div>
-        {progress!=100 &&  <Spinner/>} 
     </div>
   );
 }
