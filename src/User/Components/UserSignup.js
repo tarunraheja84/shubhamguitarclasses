@@ -60,7 +60,7 @@ const UserSignup = ({progress,setProgress}) => {
   return (
     <>
     {progress!==100 &&  <Spinner/>} 
-    {progress!==100 &&  <h4 className="userSignup-h4 text-center my-2">Please wait, It will take some time</h4>}
+    {/* {progress!==100 &&  <h4 className="userSignup-h4 text-center my-2">Please wait, It will take some time</h4>} */}
     <div className="signup-form my-5">
       <form  id="signup-form" onSubmit={addUser}>
         <h2 id="signup-h2">Sign Up</h2>
