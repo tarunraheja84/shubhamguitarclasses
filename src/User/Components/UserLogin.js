@@ -87,7 +87,7 @@ const UserLogin = ({progress,setProgress}) => {
             Want to take admission? <Link className="login-a" to="/userSignup">Click Here</Link>
           </p>
           <p id="login-p-admin">
-          <Link className="login-a" to="/adminLogin">Recruiter login as admin</Link>
+          <Link className="login-a" to="/adminLogin">Login as admin</Link>
           </p>
           <div className="d-flex justify-content-center"><a className="login-a-tarun" href="https://drive.google.com/file/d/1ojZ285e2j5kfzoCFGpn0xjF6uLKN8nEQ/view?usp=drivesdk">Created By Tarun</a></div>
           {/* <p>
