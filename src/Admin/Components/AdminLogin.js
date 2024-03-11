@@ -6,8 +6,8 @@ import '../css/login.css';
 
 
 const AdminLogin = ({progress,setProgress}) => {
-  const [email, setEmail] = useState('tarunraheja84@gmail.com');
-  const [password, setPassword] = useState('123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   
   const navigate=useNavigate()
   
