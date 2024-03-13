@@ -94,7 +94,7 @@ function AdminLogout() {
         </div>
     </form>
   </div>
-    <div className="container">
+    <div>
       <div className="adminLogoutBtn">
       <button className="btn my-2" id="logoutOneBtn" onClick={logoutSingle} type="button">
           Logout
