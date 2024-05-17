@@ -1,6 +1,6 @@
 # Shubham's Guitar Classes - Frontend
 
-Shubham's Guitar Classes is a fully functional website built using React.js for student registration and service provision by the tutor. The frontend is designed to be neat, clean, and responsive.
+Shubham's Guitar Classes is a fully fledged functional website for registration of students and providing services by the tutor. The frontend is designed to be neat, clean, and responsive.
 
 ## Features
 
